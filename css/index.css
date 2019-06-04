@@ -1,0 +1,127 @@
+body {
+  background-color: transparent;
+}
+
+/*
+---------------------------
+ Grid
+---------------------------
+*/
+
+.wrapper {
+  display: grid;
+  grid-template:
+  "header-1" 80px
+  "content" 250px
+  "select"  150px
+  /1fr;
+}
+
+.header-1 {grid-area: header-1;}
+.content  {grid-area: content;}
+.select   {grid-area: select;}
+
+.content {
+    margin-top: 20px;
+}
+
+.header-1 {
+    background-color: transparent;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 200%;
+    color: grey;
+}
+
+.select {
+    margin: 0px 0px 0px 20px;
+}
+
+/*
+---------------------------
+ Grid
+---------------------------
+*/
+
+.content {
+  display: grid;
+  grid-template-columns:
+  repeat(7.5,13%)
+  ;
+  grid-template-rows:
+  50px
+  120px
+  50px
+  ;
+  grid-template-areas:
+  "day-1-title day-2-title day-3-title day-4-title day-5-title day-6-title day-7-title"
+  "day-1-icon day-2-icon day-3-icon day-4-icon day-5-icon day-6-icon day-7-icon"
+  "day-1-details day-2-details day-3-details day-4-details day-5-details day-6-details day-7-details"
+  ;
+}
+
+.day-1-title,
+.day-2-title,
+.day-3-title,
+.day-4-title,
+.day-5-title,
+.day-6-title,
+.day-7-title {
+    background-color: #193768;
+    margin: 2px;
+    color: white;
+    font-size: 115%;
+    text-align: center;
+    padding-top: 10px;
+  }
+
+.day-1-icon,
+.day-2-icon,
+.day-3-icon,
+.day-4-icon,
+.day-5-icon,
+.day-6-icon,
+.day-7-icon {
+    position: relative;
+    background-color: transparent;
+    margin: 2px;
+    z-index: 1;
+}
+
+.day-1-details,
+.day-2-details,
+.day-3-details,
+.day-4-details,
+.day-5-details,
+.day-6-details,
+.day-7-details {
+    background-color: gainsboro;
+    margin: 2px;
+    position: relative;
+    z-index: -1;
+}
+
+#search-box {
+    height: 50px;
+    width: 100px;
+}
+
+#submit {
+    height: 50px;
+}
+
+#day-1-pic,
+#day-2-pic,
+#day-3-pic,
+#day-4-pic,
+#day-5-pic,
+#day-6-pic,
+#day-7-pic {
+    margin: 10px 0px 0px 5px;
+    opacity: 0;
+    width: 85%;
+}
+
+#select {
+    height: 50px;
+}
